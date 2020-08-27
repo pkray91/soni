@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<h1><center>Table Data</center></h1>
+<a href="/form/">Add data</a>
+<table border="1" style="border-collapse: collapse;" width="100%">
+	<tr>
+		<th>Name</th>
+		<th>Email</th>
+		<th>Mobile</th>
+		<th>Salary</th>
+		<th>Post</th>
+		<th>Message</th>
+		<th colspan="2">Action</th>
+	</tr>
+	{% for value in content %}
+	<tr>
+		<!-- <td>{{ value.name|length }}</td> -->
+		<td>{{ value.name }}</td>
+		<td>{{ value.email }}</td>
+		<td>{{ value.mobile }}</td>
+		<!-- <td>{{ value.salary|default:'xyz' }}</td> -->
+		<td>{{ value.salary }}</td>
+		<td>{{ value.designation }}</td>
+		<!-- <td>{{ value.address|safe }}</td> -->
+		<!-- <td>{{ value.address }}</td> -->
+		<!-- <td>{{ value.address|upper }}</td> -->
+		<!-- <td>{{ value.address|lower }}</td> -->
+		<td>{{ value.address|truncatewords:"10" }}</td>
+		<!-- <td>{{ value.address|join:', ' }}</td> -->
+		<td><a href="/getdataforedit/{{ value.id }}">Edit</a></td>
+		<td><a href="/delete/{{ value.id }}">Delete</a></td>
+	</tr>
+	{% endfor %}
+
+</table>
+Total:-
+
+	{{ tsal }}<br>
+	{{ min }}<br>
+	{{ max }}<br>
+	{{ avg }}<br>
+	{{ count }}<br>
+
+</html>

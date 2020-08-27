@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>show data</title>
+</head>
+<body>
+<h1><center>All Data</center></h1>
+{% for value in content %}
+
+{{ value.name }}<br>
+{{ value.email }}<br>
+{{ value.mobile }}<br>
+{{ value.salary }}<br>
+{{ value.address }}<br>
+
+{% endfor %}
+</body>
+</html>

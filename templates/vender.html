@@ -1,0 +1,28 @@
+{% extends 'master.html' %}
+
+{% block content %}
+<div>
+	<h1><center>Product Details </center></h1>
+
+		<table border="2" style="border-collapse: collapse;" width="100%">
+	<tr>
+		<th>Name</th>
+		<th>Price</th>
+		<th>Brand</th>
+		<th>Quantity</th>
+		
+	</tr>
+	{% for data in pro %}
+	<tr>
+		<td>{{ data.pro_name }}</td>
+		<td>{{ data.pro_price }}</td>
+		<td>{{ data.pro_brand }}</td>
+		<td>{{ data.pro_quantity }}</td>		
+	{% endfor %}	
+
+	</tr>
+
+
+	</table>
+</div>
+{% endblock %}

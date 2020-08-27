@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<form action="/editdata/{{ content.id}}" method="get">
+	<!-- {{ csrf_token }} -->
+	<!-- {% csrf_token %} -->
+	<label>Name</label><br>
+	<input type="text" name="name" value="{{ content.name }}"><br>
+	<label>Email</label><br>
+	<input type="email" name="email" value="{{ content.email }}"><br>
+	<label>Mobile</label><br>
+	<input type="number" name="mobile" value="{{ content.mobile }}"><br>
+	<label>Salary</label><br>
+	<input type="number" name="salary" value="{{ content.salary }}"><br>
+	<label>Address</label><br>
+	<textarea name="address" rows="7" cols="21">{{ content.address }}</textarea><br>
+	<input type="submit" name="sab" value="Update">
+</form>
+</body>
+</html>
